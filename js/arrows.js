@@ -1,33 +1,44 @@
 var keyPresses = [];
+var randoms = [];
+function go(){addRandom()};
+function addRandom(){
+    randoms += Math.floor((Math.random() * 4)+1);
+    console.log(randoms);
+};
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
-      return; // Do nothing if the event was already processed
+      return;
     }
-  
     switch (event.key) {
       case "ArrowDown":
-        console.log('arrowdown');
         keyPresses +=4;
         console.log(keyPresses);
         break;
       case "ArrowUp":
-        console.log('arrowup');
         keyPresses +=2;
         console.log(keyPresses);
         break;
       case "ArrowLeft":
-        console.log('arrowleft');
         keyPresses +=1;
         console.log(keyPresses);
         break;
       case "ArrowRight":
-        console.log('arrowright');
         keyPresses +=3;
         console.log(keyPresses);
         break;
+      case "Enter":
+        checkLogic();
+        break;
       default:
-        return; // Quit when this doesn't handle the key event.
+        return;
     }
-    // Cancel the default action to avoid it being handled twice
     event.preventDefault();
   }, true);
+  function checkLogic(){
+    if (randoms === keyPresses){
+      keyPresses = [];
+      addRandom();
+    } else {
+      return console.log('This would link to the hi-score page');
+    };
+  } 
