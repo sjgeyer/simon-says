@@ -1,0 +1,14 @@
+@keyframes jump {
+  50% {
+    transform: translate(0px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.jump {
+  animation-name: jump;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
