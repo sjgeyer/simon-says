@@ -2,11 +2,13 @@ var red = document.getElementById('red');
 var yellow = document.getElementById('yellow');
 var blue = document.getElementById('blue');
 var green = document.getElementById('green');
+var nextButton = document.getElementById('next');
 
 var testArray = [1, 2, 3, 4, 1, 2, 3, 4];
 
 var addJump;
 var removeJump;
+var iterate;
 
 function iterateArray() {
   for (var i = 0; i <= testArray.length; i++) {
@@ -32,4 +34,8 @@ function iterateArray() {
   }
 }
 
-var iterate = setInterval(iterateArray, 1000);
+function computerTurn () {
+  iterate = setInterval(iterateArray, 1000);
+}
+
+nextButton.addEventListener('click', computerTurn);
