@@ -1,10 +1,9 @@
 'use-strict';
 
-var allUsers = [];
 var score = JSON.parse(localStorage.getItem('roundNumber'))-1;
 
 if (localStorage.allUsers){
-  allUsers = JSON.parse(localStorage.getItem('allUsers'));
+  var allUsers = JSON.parse(localStorage.getItem('allUsers'));
 }
 
 /// sorting allUsers by score
@@ -12,13 +11,29 @@ allUsers.sort(function(a, b) {
   return parseFloat(b.score) - parseFloat(a.score);
 });
 
-// populate the hi-score list
-var scoreOl = document.getElementById('hi-scores');
+function makeElement(type, content, parent) {
+  var newEl = document.createElement(type);
+  newEl.textContent = content;
+  parent.appendChild(newEl);
+}
 
-for (var i=0; i < allUsers.length; i++){
-  var newLi = document.createElement('li');
-  newLi.textContent = allUsers[i].name + ': '+ allUsers[i].score;
-  scoreOl.appendChild(newLi);
+// populate the hi-score list
+var tableHeader = ['Rank', 'Name', 'Score'];
+var scoreTable = document.getElementById('hi-scores');
+var trEl = document.createElement('tr');
+for (var i = 0; i < tableHeader.length; i++) {
+  makeElement('th', tableHeader[i], trEl);
+}
+scoreTable.appendChild(trEl);
+for (var j = 0; j < allUsers.length; j++){
+  trEl = document.createElement('tr');
+  makeElement('td', j+1, trEl);
+  makeElement('td', allUsers[j].name, trEl);
+  makeElement('td', allUsers[j].score*100, trEl);
+  scoreTable.appendChild(trEl);
+  if (allUsers[j].name === JSON.parse(localStorage.getItem('userName')) && allUsers[j].score === JSON.parse(localStorage.getItem('roundNumber'))-1) {
+    trEl.classList.add('current');
+  }
 }
 
 // generate the title message

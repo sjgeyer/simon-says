@@ -49,3 +49,7 @@ body {
   right: 0px;
   top: 120px;
 }
+
+.current {
+  font-weight: bold;
+}
