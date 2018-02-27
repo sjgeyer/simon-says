@@ -1,6 +1,7 @@
 body {
   width: 1000px;
   margin: auto;
+  font-family: 'Swanky and Moo Moo', cursive;
 }
 
 @keyframes jump {
