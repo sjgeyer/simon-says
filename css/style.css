@@ -19,6 +19,14 @@ body {
   animation-iteration-count: 1;
 }
 
+#roundCounter {
+  float: right;
+}
+
+#submit #next {
+  float:left;
+}
+
 #ghostPics {
   position: relative;
   height: 400px;

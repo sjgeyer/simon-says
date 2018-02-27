@@ -117,6 +117,9 @@ function userTurn () {
       keyPresses.pop();
       arrowImages.removeChild(arrowImages.lastChild);
       break;
+    case 'Enter':
+      checkLogic();
+      break;
     default:
       return;
     }
