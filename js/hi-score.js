@@ -3,7 +3,7 @@
 User.allUsers = [];
 
 if (localStorage.allUsers){
-User.allUsers = JSON.parse(localStorage.getItem('allUsers'))
+  User.allUsers = JSON.parse(localStorage.getItem('allUsers'));
 }
 
 // creating new 'User' object
@@ -17,7 +17,7 @@ function User(name, score){
 // 'userName' and 'score' from local storage, pushed by game.html javascript
 
 var userName = localStorage.getItem(userName);
-var score = JSON.parse(localStorage.getItem(roundNumber))
+var score = JSON.parse(localStorage.getItem(roundNumber));
 
 new User(userName, score);
 
@@ -36,9 +36,9 @@ User.allUsers.sort(function(a, b) {
 var scoreOl = document.getElementById('hi-scores');
 
 for (var i=0; i < User.allUsers.length; i++){
-    var newLi = document.createElement('li');
-    newLi.textContent = User.allUsers[i].name + ': '+ User.allUsers[i].score;
-    scoreOl.appendChild(newLi);
+  var newLi = document.createElement('li');
+  newLi.textContent = User.allUsers[i].name + ': '+ User.allUsers[i].score;
+  scoreOl.appendChild(newLi);
 }
 
 // generate the title message

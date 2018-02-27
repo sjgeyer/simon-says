@@ -14,6 +14,8 @@ var arrowImages = document.getElementById('arrowImages');
 var roundCounter = document.getElementById('roundCounter');
 var round = 1;
 
+document.getElementById('headMessage').innerHTML = 'Hi ' + JSON.parse(localStorage.getItem('userName')) + ', can you follow my moves?';
+
 var gameOver = document.createElement('img');
 gameOver.src = 'images/Game-Over.png';
 var scoresButton = document.getElementById('scoresButton');
