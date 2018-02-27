@@ -25,6 +25,8 @@ var iterate;
 var randoms = [];
 var keyPresses = [];
 
+document.getElementById('headMessage').innerHTML = " Hi " + JSON.parse(localStorage.getItem('userName')) + " can you keep up with my moves?";
+
 function addRandom(){
   randoms.push(Math.floor(Math.random() * 4)+1);
 }
