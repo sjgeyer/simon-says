@@ -12,6 +12,7 @@ var myTurn = document.getElementById('myTurn');
 var yourTurn = document.getElementById('yourTurn');
 var arrowImages = document.getElementById('arrowImages');
 var roundCounter = document.getElementById('roundCounter');
+var correct = document.getElementById('correct');
 var round = 1;
 var userName = JSON.parse(localStorage.getItem('userName'));
 
@@ -66,6 +67,7 @@ function computerTurn () {
   startButton.style.display = 'none';
   submitButton.style.display = 'none';
   nextButton.style.display = 'none';
+  correct.style.display = 'none';
   addRandom();
   console.log(randoms);
   iterate = setInterval(iterateArray, 1000);
@@ -77,8 +79,7 @@ function userTurn () {
   myTurn.style.display = 'none';
   yourTurn.style.display = 'block';
   submitButton.style.display = 'block';
-  nextButton.style.display = 'block';
-
+  nextButton.style.display = 'none';
   window.addEventListener('keydown', function (event) {
     if (event.defaultPrevented) {
       return;
@@ -136,10 +137,15 @@ function checkLogic(){
       gameElements.appendChild(gameOver);
       scoresButton.style.display = 'block';
       localStorage.setItem('roundNumber', JSON.stringify(round));
+      if (localStorage.allUsers) {
+        User.allUsers = JSON.parse(localStorage.getItem('allUsers'));
+      }
       new User(userName, round-1);
       localStorage.setItem('allUsers', JSON.stringify(User.allUsers));
     } else {
-      console.log('All good');
+      submitButton.style.display = 'none';
+      nextButton.style.display = 'block';
+      correct.style.display = 'block';
     }
   }
   console.log(round);

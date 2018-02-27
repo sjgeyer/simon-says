@@ -1,6 +1,7 @@
 body {
   width: 1000px;
   margin: auto;
+  font-family: 'Swanky and Moo Moo', cursive;
 }
 
 @keyframes jump {
@@ -50,131 +51,75 @@ body {
 }
 
 /* Button Style */
-.container {
-  margin: 10px;
-  display: block;
-  width: 150px;
-  margin-left: 247px;
-  text-align: center;
-  background-color: black;
-  display: inline-block;
-}
+
 
 a {
-  color:white;
+  color:black;
   text-decoration: none;
   font-family: 'Sans';
 }
 
-.button:active {
-  top: 2px;
-}
-
-.button {
-  position: relative;
-  display: block;
-  margin: 10px;
-
-  text-transform: uppercase;
-  font-size: 15px;
-  color: red;
-}
-
-.button::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: -10px;
-  right: -10px;
-  background: red;
-  z-index: -1;
-}
-
-.button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 4px;
-  bottom: 4px;
-  left: -6px;
-  right: -6px;
-  background: red;
-  z-index: -1;
-}
-
-.button {
-  padding: 5px 5px;
-  position: relative;
-  background: red;
-  width: auto;
-  z-index: 2;
-}
 
 /* About Us */
 
+#backHome {
+  margin-left: 150px;
+}
+
 #aboutUs{
   display: inline-block;
-  margin-left: 213px;
-  font-family: Swanky and Moo Moo;
+  margin-left: 480px;
 }
 
 /* Team positioning */
 #team {
   position: relative;
-  height: 600px;
-  width: 500px;
+  height: 700px;
+  width: 700px;
   margin: auto;
-  border: 3px dashed blue;
 }
 
-#sarah, #matt, #james, #collin {
-  position: absolute;
+
+#col1 {
+  display: inline-block;
+  padding-bottom: 0px;
 }
 
-#sarah {
-  left: 0px;
-  top: 150px;
+#nameSarah {
 }
 
-#matt {
-  bottom: 0px;
-  left: 35%;
+#imgSarah {
+  margin-bottom:200px;
 }
 
-#james {
-  top: 10px;
-  left: 35%;
+#col2 {
+  display: inline-block;
+  margin-left: 120px;
 }
 
-#collin {
-  right: 0px;
-  top: 150px;
+#nameMatt {
 }
 
-/* Names positioning */
-
-#sarah, #matt, #james, #collin {
-  position: absolute;
+#imgMatt {
 }
 
-#sarahName {
-  left: 0px;
-  top: 150px;
+#nameCollin {
+  margin-top: 137px;
 }
 
-#mattName {
-  bottom: 0px;
-  left: 35%;
+#imgCollin {
+
 }
 
-#jamesname {
-  top: 10px;
-  left: 35%;
+#col3 {
+  display: inline-block;
+  margin-left: 50px;
+  float: right;
 }
 
-#collinname {
-  right: 0px;
-  top: 150px;
+#nameJames {
+  margin-top: 223px;
+}
+
+#imgJames {
 }

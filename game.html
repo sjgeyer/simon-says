@@ -5,14 +5,18 @@
         <meta charset="UTF-8">
         <title>Game</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo" rel="stylesheet">
     </head>
 
     <body>
+        <header>
+            <h1>Spooky Says</h1>
+        </header>
         <div id="gameElements">
-            <h2 id="headMessage"></h2>
-            <button id="start">Start</button>
-            <h3 id="roundCounter"></h3>
-
+        <h2 id="headMessage"></h2>
+        <button id="start">Start</button>
+        <h3 id="roundCounter"></h3>
+        
             <div id="ghostPics">
                 <img id="red" src="images/Ghost-L.png" alt="ghostL"/>
                 <img id="yellow" src="images/Ghost-U.png" alt="ghostU"/>
@@ -27,6 +31,7 @@
 
             <div id="arrowImages"></div>
 
+            <p id="correct" style="display:none">Correct!</p>
             <button id="submit" style="display:none">Submit Answer</button>
             <button id="next" style="display:none">Next Puzzle</button>
         </div>
