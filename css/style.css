@@ -19,6 +19,12 @@ body {
   animation-iteration-count: 1;
 }
 
+.jump2x {
+  animation-name: jump;
+  animation-duration: 0.25s;
+  animation-iteration-count: 1;
+}
+
 #roundCounter {
   float: right;
 }
