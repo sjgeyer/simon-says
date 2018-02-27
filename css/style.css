@@ -1,3 +1,8 @@
+body {
+  width: 1000px;
+  margin: auto;
+}
+
 @keyframes jump {
   50% {
     transform: translate(0px, -10px);
@@ -11,4 +16,35 @@
   animation-name: jump;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
+}
+
+#ghostPics {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  margin: auto;
+}
+
+#red, #yellow, #blue, #green {
+  position: absolute;
+}
+
+#red {
+  left: 0px;
+  top: 120px;
+}
+
+#yellow {
+  top: 0px;
+  left: 35%;
+}
+
+#blue {
+  bottom: 0px;
+  left: 35%;
+}
+
+#green {
+  right: 0px;
+  top: 120px;
 }

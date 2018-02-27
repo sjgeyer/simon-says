@@ -7,11 +7,16 @@ var green = document.getElementById('green');
 var startButton = document.getElementById('start');
 var nextButton = document.getElementById('next');
 var submitButton = document.getElementById('submit');
+var gameElements = document.getElementById('gameElements');
 var myTurn = document.getElementById('myTurn');
 var yourTurn = document.getElementById('yourTurn');
 var arrowImages = document.getElementById('arrowImages');
 var roundCounter = document.getElementById('roundCounter');
 var round = 1;
+
+var gameOver = document.createElement('img');
+gameOver.src = 'images/Game-Over.png';
+var scoresButton = document.getElementById('scoresButton');
 
 var addJump;
 var removeJump;
@@ -110,7 +115,9 @@ function userTurn () {
 function checkLogic(){
   for(var i = 0; i < randoms.length; i++) {
     if(randoms[i] !== keyPresses[i]) {
-      console.log('This would link to the hi-score page');
+      gameElements.textContent = '';
+      gameElements.appendChild(gameOver);
+      scoresButton.style.display = 'block';
     } else {
       console.log('All good');
     }
