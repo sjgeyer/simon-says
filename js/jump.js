@@ -5,6 +5,7 @@ var yellow = document.getElementById('yellow');
 var blue = document.getElementById('blue');
 var green = document.getElementById('green');
 var startButton = document.getElementById('start');
+var instructions = document.getElementById('instructions');
 var nextButton = document.getElementById('next');
 var submitButton = document.getElementById('submit');
 var gameElements = document.getElementById('gameElements');
@@ -13,8 +14,11 @@ var yourTurn = document.getElementById('yourTurn');
 var arrowImages = document.getElementById('arrowImages');
 var roundCounter = document.getElementById('roundCounter');
 var correct = document.getElementById('correct');
+var dynamicTag = document.getElementById('dynamicTag');
 var round = 1;
 var userName = JSON.parse(localStorage.getItem('userName'));
+var baseTime = 1000;
+var jumpClass = 'jump';
 
 document.getElementById('headMessage').innerHTML = 'Hi ' + userName + ', can you follow my moves?';
 
@@ -38,20 +42,20 @@ function addRandom(){
 function iterateArray() {
   for (var i = 0; i <= randoms.length; i++) {
     if (randoms[i] === 1) {
-      addJump = setTimeout(function() {red.classList.add('jump');}, 1000*i);
-      removeJump = setTimeout(function() {red.classList.remove('jump');}, (1000*i)+500);
+      addJump = setTimeout(function() {red.classList.add(jumpClass);}, baseTime*i);
+      removeJump = setTimeout(function() {red.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
     }
     if (randoms[i] === 2) {
-      addJump = setTimeout(function() {yellow.classList.add('jump');}, 1000*i);
-      removeJump = setTimeout(function() {yellow.classList.remove('jump');}, (1000*i)+500);
+      addJump = setTimeout(function() {yellow.classList.add(jumpClass);}, baseTime*i);
+      removeJump = setTimeout(function() {yellow.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
     }
     if (randoms[i] === 3) {
-      addJump = setTimeout(function() {green.classList.add('jump');}, 1000*i);
-      removeJump = setTimeout(function() {green.classList.remove('jump');}, (1000*i)+500);
+      addJump = setTimeout(function() {green.classList.add(jumpClass);}, baseTime*i);
+      removeJump = setTimeout(function() {green.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
     }
     if (randoms[i] === 4) {
-      addJump = setTimeout(function() {blue.classList.add('jump');}, 1000*i);
-      removeJump = setTimeout(function() {blue.classList.remove('jump');}, (1000*i)+500);
+      addJump = setTimeout(function() {blue.classList.add(jumpClass);}, baseTime*i);
+      removeJump = setTimeout(function() {blue.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
     }
     if (i === randoms.length){
       clearInterval(iterate);
@@ -60,19 +64,30 @@ function iterateArray() {
 }
 
 function computerTurn () {
+  if (round === 1){
+    addRandom();
+    addRandom();
+  }
+  if (round === 4){
+    baseTime = (baseTime * .5);
+    jumpClass = 'jump2x';
+    dynamicTag.textContent = 'SPEED UP!';
+  }
   submitButton.removeEventListener('click', checkLogic);
+  window.removeEventListener('keydown', computerTurn, true);
   roundCounter.textContent = 'Round ' + round;
   arrowImages.textContent = '';
   yourTurn.style.display = 'none';
   myTurn.style.display = 'block';
   startButton.style.display = 'none';
+  instructions.style.display = 'none';
   submitButton.style.display = 'none';
   nextButton.style.display = 'none';
   correct.style.display = 'none';
   addRandom();
   console.log(randoms);
-  iterate = setInterval(iterateArray, 1000);
-  userTurnTimeout = setTimeout(userTurn, (randoms.length*1000)+1000);
+  iterate = setInterval(iterateArray, baseTime);
+  userTurnTimeout = setTimeout(userTurn, (randoms.length*baseTime)+baseTime);
 }
 
 function keyDown(event) {
@@ -157,6 +172,7 @@ function checkLogic(){
       submitButton.style.display = 'none';
       nextButton.style.display = 'block';
       correct.style.display = 'block';
+      window.addEventListener('keydown', computerTurn, true);
     }
   }
   console.log(round);
