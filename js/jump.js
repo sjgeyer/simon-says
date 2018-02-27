@@ -13,6 +13,9 @@ var yourTurn = document.getElementById('yourTurn');
 var arrowImages = document.getElementById('arrowImages');
 var roundCounter = document.getElementById('roundCounter');
 var round = 1;
+var userName = JSON.parse(localStorage.getItem('userName'));
+
+document.getElementById('headMessage').innerHTML = 'Hi ' + userName + ', can you follow my moves?';
 
 var gameOver = document.createElement('img');
 gameOver.src = 'images/Game-Over.png';
@@ -21,9 +24,11 @@ var scoresButton = document.getElementById('scoresButton');
 var addJump;
 var removeJump;
 var iterate;
+var userTurnTimeout;
 
 var randoms = [];
 var keyPresses = [];
+User.allUsers = [];
 
 function addRandom(){
   randoms.push(Math.floor(Math.random() * 4)+1);
@@ -56,7 +61,6 @@ function iterateArray() {
 function computerTurn () {
   roundCounter.textContent = 'Round ' + round;
   arrowImages.textContent = '';
-  round++;
   yourTurn.style.display = 'none';
   myTurn.style.display = 'block';
   startButton.style.display = 'none';
@@ -65,7 +69,7 @@ function computerTurn () {
   addRandom();
   console.log(randoms);
   iterate = setInterval(iterateArray, 1000);
-  userTurn();
+  userTurnTimeout = setTimeout(userTurn, (randoms.length*1000)+1000);
 }
 
 function userTurn () {
@@ -115,16 +119,27 @@ function userTurn () {
   }, true);
 }
 
+function User(name, score){
+  this.name = name;
+  this.score = score;
+  User.allUsers.push(this);
+}
+
 function checkLogic(){
   for(var i = 0; i < randoms.length; i++) {
     if(randoms[i] !== keyPresses[i]) {
       gameElements.textContent = '';
       gameElements.appendChild(gameOver);
       scoresButton.style.display = 'block';
+      localStorage.setItem('roundNumber', JSON.stringify(round));
+      new User(userName, round-1);
+      localStorage.setItem('allUsers', JSON.stringify(User.allUsers));
     } else {
       console.log('All good');
     }
   }
+  console.log(round);
+  round++;
 }
 
 roundCounter.textContent = 'Round ' + round;
