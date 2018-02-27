@@ -113,8 +113,8 @@ function keyDown(event) {
     arrowImages.removeChild(arrowImages.lastChild);
     break;
    case 'Enter':
-      checkLogic();
-      break;
+    checkLogic();
+    break;
   default:
     return;
   }
@@ -129,7 +129,7 @@ function userTurn () {
   nextButton.style.display = 'none';
 
   window.addEventListener('keydown', keyDown, true);
-  submitButton.addEventListener('click', check);
+  submitButton.addEventListener('click', checkLogic);
                                 
 }
 
