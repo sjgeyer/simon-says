@@ -10,9 +10,6 @@ userForm.addEventListener('submit', function(event) {
   }
   var userName = event.target.input.value;
   localStorage.setItem('userName',JSON.stringify(userName));
-
-  console.log(localStorage.userName);
-  // document.getElementById('you').innerHTML = JSON.parse(localStorage.getItem('userName', JSON.stringify(userName)));
-
+  document.getElementById('you').innerHTML = JSON.parse(localStorage.getItem('user', JSON.stringify(userName)));
   window.location.assign('game.html');
 });
