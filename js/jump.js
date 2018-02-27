@@ -112,6 +112,9 @@ function keyDown(event) {
     keyPresses.pop();
     arrowImages.removeChild(arrowImages.lastChild);
     break;
+   case 'Enter':
+      checkLogic();
+      break;
   default:
     return;
   }
@@ -124,8 +127,10 @@ function userTurn () {
   yourTurn.style.display = 'block';
   submitButton.style.display = 'block';
   nextButton.style.display = 'none';
+
   window.addEventListener('keydown', keyDown, true);
-  submitButton.addEventListener('click', checkLogic);
+  submitButton.addEventListener('click', check);
+                                
 }
 
 function User(name, score){
