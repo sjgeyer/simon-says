@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Simon Says</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo" rel="stylesheet">
-</head>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Spooky Says</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+      <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|VT323" rel="stylesheet">
+    </head>
   <body>
     <header>
         <h1>Spooky Says</h1>
     </header>
-    <img src = "http://via.placeholder.com/250x300"/>
+    <section id="images">
+      <div id="spooky">
+        <img src="http://via.placeholder.com/250x300" alt="Spooky" title="Spooky"/>
+      </div>
+      <div id="spooky-text">
+        <p>Hi! I'm Spooky, and these are my friends! Want to play a game with us? Enter your name and click 'Play' to start!</p>
+        <ul>
+          <li><img src="images/Ghost-L.png" alt="Spooky Matt" title="Spooky Matt"/></li>
+          <li><img src="images/Ghost-U.png" alt="Spooky Collin" title="Spooky Collin"/></li>
+          <li><img src="images/Ghost-R.png" alt="Spooky Sarah" title="Spooky Sarah"/></li>
+          <li><img src="images/Ghost-D.png" alt="Spooky James" title="Spooky James"/></li>
+        </ul>
+      </div>
+    </section>
     <form id="userForm">
       <input id="input" type="text" onfocus="this.value=''" value="Enter name" name="username"><br>
-      <input id="play" type="submit" value="Play">
+      <button>Play</button>
     </form>
-    <div id="you">
+    <div id="about-button">
+      <a href="about-us.html"><button id="about">About Us</button></a>
     </div>
-    <button><a href="about-us.html">About Us</a></button>
+    <footer></footer>
     <script src="js/index.js" type="text/javascript"></script>
   </body>
 </html>

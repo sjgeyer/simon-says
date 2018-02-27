@@ -18,7 +18,19 @@ body {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
+<<<<<<< HEAD
 /*Ghost positioning*/
+=======
+
+#roundCounter {
+  float: right;
+}
+
+#submit #next {
+  float:left;
+}
+
+
 #ghostPics {
   position: relative;
   height: 400px;
@@ -50,6 +62,7 @@ body {
   top: 120px;
 }
 
+
 /* Button Style */
 
 
@@ -63,23 +76,28 @@ a {
 /* About Us */
 
 #backHome {
-  margin-left: 150px;
+  margin-left: 260px;
+  margin-right: 255px;
 }
 
 #aboutUs{
   display: inline-block;
-  margin-left: 480px;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Team positioning */
 #team {
   position: relative;
-  height: 700px;
-  width: 700px;
+  height: 500px;
+  width: 485px;
   margin: auto;
 }
 
-
+.name {
+  margin: 0;
+  padding: 0px;
+}
 #col1 {
   display: inline-block;
   padding-bottom: 0px;
@@ -89,12 +107,11 @@ a {
 }
 
 #imgSarah {
-  margin-bottom:200px;
+  margin-bottom:130px;
 }
 
 #col2 {
   display: inline-block;
-  margin-left: 120px;
 }
 
 #nameMatt {
@@ -104,22 +121,25 @@ a {
 }
 
 #nameCollin {
-  margin-top: 137px;
+  margin-top: 50px;
 }
 
 #imgCollin {
-
 }
 
 #col3 {
   display: inline-block;
-  margin-left: 50px;
+  margin-right: 10px;
   float: right;
 }
 
 #nameJames {
-  margin-top: 223px;
+  margin-top: 120px;
 }
 
 #imgJames {
+}
+
+.current {
+  font-weight: bold;
 }
