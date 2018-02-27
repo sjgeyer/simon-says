@@ -112,6 +112,10 @@ function userTurn () {
       arrowImages.appendChild(newArrow);
       console.log(keyPresses);
       break;
+    case 'Backspace':
+      keyPresses.pop();
+      arrowImages.removeChild(arrowImages.lastChild);
+      break;
     default:
       return;
     }
