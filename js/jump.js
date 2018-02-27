@@ -60,6 +60,8 @@ function computerTurn () {
   yourTurn.style.display = 'none';
   myTurn.style.display = 'block';
   startButton.style.display = 'none';
+  submitButton.style.display = 'none';
+  nextButton.style.display = 'none';
   addRandom();
   console.log(randoms);
   iterate = setInterval(iterateArray, 1000);
@@ -70,6 +72,9 @@ function userTurn () {
   keyPresses = [];
   myTurn.style.display = 'none';
   yourTurn.style.display = 'block';
+  submitButton.style.display = 'block';
+  nextButton.style.display = 'block';
+
   window.addEventListener('keydown', function (event) {
     if (event.defaultPrevented) {
       return;
