@@ -30,7 +30,9 @@ window.addEventListener('keydown', function (event) {
 function makeCollin(){
   console.log('bind collin\'s info to the dom and append it?');
   console.log('put rest of function here manipulating images');
-  var collin = document.createElement("p");
+  var collin = document.createElement('div');
+  //create blank div, use this with innerhtml to rewrite <p> content within div
+  collin.innerHTML = '<p>Collin\'s info will go here.</p>';
   var collinP = document.createTextNode("Collin's info will go here");
   collin.appendChild(collinP);
   document.body.appendChild(collinP);
@@ -39,7 +41,8 @@ function makeCollin(){
 function makeSarah(){
   console.log('bind sarah\'s info to the dom and append it?');
   console.log('put rest of function here manipulating images');
-  var sarah = document.createElement("p");
+  var sarah = document.createElement("div");
+  sarah.innerHTML = '<p>Sarah\'s info will go here.<p>';
   var sarahP = document.createTextNode("Sara's info will go here");
   sarah.appendChild(sarahP);
   document.body.appendChild(sarahP);
