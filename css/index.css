@@ -22,7 +22,7 @@ button {
   margin: 10px auto;
   text-align: center;
   color: white;
-  background-color: #000;
+  background-color: #ff0000;
   border: 8px solid white;
   font-size: 20px;
   font-weight: bold;
@@ -36,6 +36,7 @@ button {
 
 #about {
   margin-top: 0px;
+  background-color: #0000ff;
 }
 
 form {
@@ -49,31 +50,40 @@ input {
   height: 30px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
 footer {
   height: 50px;
 }
 
 #spooky, #spooky-text {
-  width: 20%;
+  width: 400px;
 }
 
 #spooky{
   float: left;
-  margin-left: 33%;
+  margin-left: 15%;
 }
 
 #spooky-text {
   font-size: 30px;
   float: left;
   padding: 50px;
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
 #images {
   height: 320px;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+ ul li {
+  display: inline-block;
+}
+
+li img {
+  width: 80px;
+  margin: 0px;
+  padding: 0px;
 }
