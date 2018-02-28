@@ -19,7 +19,6 @@ function handleSubmit(){
     window.location.assign('game.html');
     console.log('Else');
   }
-}
 
 matt.addEventListener('dblclick', function(){
   window.location.assign('yellowgreen.html');
@@ -28,7 +27,6 @@ matt.addEventListener('dblclick', function(){
 james.addEventListener('dblclick', function(){
   window.location.assign('yellowgreen.html');
 });
-
 
 
 //   if(event.target.input.value.length < 2 ){
@@ -49,3 +47,4 @@ james.addEventListener('dblclick', function(){
 //     localStorage.setItem('userName',JSON.stringify(userName));
 //     window.location.assign('game.html');
 // }
+
