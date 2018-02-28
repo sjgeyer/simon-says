@@ -4,11 +4,12 @@ var userForm = document.getElementById('userForm');
 
 userForm.addEventListener('submit', function(event) {
   event.preventDefault();
-  if(event.target.input.value.length < 3){
-    alert('Name is too short!');
-    event.target.input.value = null;
+  if(event.target.input.value === 'Enter Name' || event.target.input.value === ''){
+    alert('Enter Your Name');
   }
-  var userName = event.target.input.value;
-  localStorage.setItem('userName',JSON.stringify(userName));
-  window.location.assign('game.html');
+  else{
+    var userName = event.target.input.value;
+    localStorage.setItem('userName',JSON.stringify(userName));
+    window.location.assign('game.html');
+  }
 });
