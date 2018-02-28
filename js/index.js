@@ -1,6 +1,8 @@
 'use strict';
 
 var userForm = document.getElementById('userForm');
+var matt = document.getElementById('matt');
+var james = document.getElementById('james');
 
 userForm.addEventListener('submit', handleSubmit);
 
@@ -18,6 +20,15 @@ function handleSubmit(){
     console.log('Else');
   }
 }
+
+matt.addEventListener('dblclick', function(){
+  window.location.assign('yellowgreen.html');
+});
+
+james.addEventListener('dblclick', function(){
+  window.location.assign('yellowgreen.html');
+});
+
 
 
 //   if(event.target.input.value.length < 2 ){

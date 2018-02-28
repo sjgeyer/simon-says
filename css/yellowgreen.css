@@ -1,0 +1,64 @@
+body {
+  width: 100%;
+  margin: auto;
+  font-family: 'VT323', monospace;
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Creepster', cursive;
+  padding-top: 20px;
+}
+
+header {
+  height: 150px;
+}
+
+button {
+  height: 60px;
+  width: 200px;
+  margin: 50px auto;
+  text-align: center;
+  color: white;
+  background-color: #000000;
+  border: 8px solid rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'VT323', monospace;
+}
+
+#images {
+  margin-top: 50px;
+  text-align:center;
+  font-size: 25px;
+}
+
+
+@keyframes jump {
+  50% {
+    transform: translate(0px, 0px);
+  }
+  55% {
+    transform: translate(0px, -10px);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.yellow {
+  animation-name: jump;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+
+.green {
+  animation-name: jump;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
