@@ -25,7 +25,7 @@ for (var i = 0; i < tableHeader.length; i++) {
   makeElement('th', tableHeader[i], trEl);
 }
 scoreTable.appendChild(trEl);
-for (var j = 0; j < allUsers.length; j++){
+for (var j = 0; j < 10; j++){
   trEl = document.createElement('tr');
   makeElement('td', j+1, trEl);
   makeElement('td', allUsers[j].name, trEl);
