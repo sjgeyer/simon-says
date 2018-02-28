@@ -57,7 +57,7 @@ function makeSarah(){
   clear(sarahImg, 'focusL');
 }
 function makeMatt(){
-  var mattInfo = 'This is where Matt\'s info will go';
+  var mattInfo = 'Matt is an aspiring web developer who enjoys helping people figure out what they want and then helping them get it. One day he hopes to accomplish this by using his skills as a web and software developer. ';
   document.getElementById('info').innerHTML = mattInfo;
   document.getElementById('info').style.borderColor = '#fff000';
   mattImg.classList.toggle('focusL');
