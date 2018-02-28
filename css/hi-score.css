@@ -31,6 +31,8 @@ button {
 
 a {
   font-family: 'VT323', monospace;
+  text-decoration: none;
+  color: black;
 }
 
 #hi-scores, message, h2{
@@ -42,8 +44,21 @@ a {
   font-size: 30px;
 }
 
+@keyframes floatSmall {
+  0% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
 #ghost {
   text-align: center;
+  animation: floatSmall 3s ease-in-out infinite;
 }
 
 #buttons {
@@ -64,3 +79,6 @@ footer {
   height: 50px;
 }
 
+.current {
+  color: #fff000;
+}

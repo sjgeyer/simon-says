@@ -2,8 +2,8 @@
 
 var userForm = document.getElementById('userForm');
 
-userForm.addEventListener('submit', function(event) {
-  event.preventDefault();
+userForm.addEventListener('submit', handleSubmit);
+
 
   var emptStr = "";
   for(var i=0; i<event.target.input.value.length; i++){
@@ -22,3 +22,18 @@ userForm.addEventListener('submit', function(event) {
     window.location.assign('game.html');
   }
 });
+
+function handleSubmit(){
+  if(event.target.input.value === 'Enter Name' || event.target.input.value === ''){
+    event.preventDefault();
+    alert('Enter Your Name');
+    console.log('Reset');
+  }
+  else{
+    event.preventDefault();
+    var userName = event.target.input.value;
+    localStorage.setItem('userName',JSON.stringify(userName));
+    window.location.assign('game.html');
+    console.log('Else');
+  }
+}

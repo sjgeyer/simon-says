@@ -59,10 +59,52 @@ footer {
   width: 400px;
 }
 
+@keyframes floatBig {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes floatSmall {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
 #spooky{
   float: left;
   margin-left: 15%;
+  animation: floatBig 4s ease-in-out infinite;
 }
+
+#sarah {
+  animation: floatSmall 2s ease-in-out infinite;
+}
+
+#matt {
+  animation: floatSmall 5s ease-in-out infinite;
+}
+
+#james {
+  animation: floatSmall 3s ease-in-out infinite;
+}
+
+#collin {
+  animation: floatSmall 4s ease-in-out infinite;
+}
+
 
 #spooky-text {
   font-size: 30px;
