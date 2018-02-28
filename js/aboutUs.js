@@ -44,11 +44,11 @@ function clear(ghostPic, className) {
   }
 }
 function makeCollin(){
-  var collinInfo = 'This is where Collin\'s info will go';
+  var collinInfo = 'A creature of refined sensibilities, Collin enjoys literature, music, and melancholy introspection.';
   document.getElementById('info').innerHTML = collinInfo;
   document.getElementById('info').style.borderColor = '#0000ff';
   ghostCollin.classList.toggle('focusR');
-  teamImg.src = 'images/Ghost-U.png';
+  teamImg.src = 'images/Collin.jpg';
   clear(ghostCollin, 'focusR');
 }
 function makeSarah(){
