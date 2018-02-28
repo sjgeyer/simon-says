@@ -18,14 +18,21 @@ h2 {
   color: white;
   font-size: 30px;
 }
-
+.focusR {
+  transform: translate(100px, 0px);
+}
+.focusL {
+  transform: translate(-100px, 0px);
+}
 #info {
   height: 100px;
   width: 335px;
+
   overflow: none;
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
+  border-radius: 22px;
   border-color: orange;
   border-width: 5px;
   color: yellow;
