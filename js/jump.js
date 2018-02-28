@@ -8,6 +8,7 @@ var startButton = document.getElementById('start');
 var instructions = document.getElementById('instructions');
 var nextButton = document.getElementById('next');
 var submitButton = document.getElementById('submit');
+var exitButton = document.getElementById('exitButton');
 var gameElements = document.getElementById('gameElements');
 var myTurn = document.getElementById('myTurn');
 var yourTurn = document.getElementById('yourTurn');
@@ -100,6 +101,7 @@ function computerTurn () {
   startButton.style.display = 'none';
   instructions.style.display = 'none';
   submitButton.style.display = 'none';
+  exitButton.style.display = 'block';
   nextButton.style.display = 'none';
   correct.style.display = 'none';
   wrong.style.display = 'none';
