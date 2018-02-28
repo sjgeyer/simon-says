@@ -1,0 +1,107 @@
+body {
+  width: 1000px;
+  margin: auto;
+  font-family: 'Swanky and Moo Moo', cursive;
+  background-color: black;
+}
+
+p {
+   color: white;
+}
+
+h1 {
+  color: white;
+  font-size: 65px;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+}
+
+
+/* Button Style */
+
+button {
+  height: 60px;
+  width: 200px;
+  margin: 10px auto;
+  text-align: center;
+  color: white;
+  background-color: #00ff00;
+  border: 8px solid white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'VT323', monospace;
+  margin-left: 200px;
+  margin-right: 120px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* About Us */
+
+#aboutUs{
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* Team positioning */
+#team {
+  position: relative;
+  height: 500px;
+  width: 485px;
+  margin: auto;
+}
+
+.name {
+  margin: 0;
+  padding: 0px;
+}
+#col1 {
+  display: inline-block;
+  padding-bottom: 0px;
+}
+
+#nameSarah {
+}
+
+#imgSarah {
+  margin-bottom:130px;
+}
+
+#col2 {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#nameMatt {
+}
+
+#imgMatt {
+}
+
+#nameCollin {
+  margin-top: 50px;
+}
+
+#imgCollin {
+}
+
+#col3 {
+  display: inline-block;
+  margin-right: 10px;
+  float: right;
+}
+
+#nameJames {
+  margin-top: 120px;
+}
+
+#imgJames {
+}
