@@ -24,6 +24,12 @@ h2 {
 .focusL {
   transform: translate(-100px, 0px);
 }
+.focusU {
+  transform: translate(-100px, 0px);
+}
+.focusD {
+  transform: translate(100px, 0px);
+}
 #info {
   height: 100px;
   width: 335px;
