@@ -4,6 +4,8 @@ body {
   font-family: 'Swanky and Moo Moo', cursive;
 }
 
+
+
 @keyframes jump {
   50% {
     transform: translate(0px, -10px);
@@ -66,86 +68,4 @@ body {
 #green {
   right: 0px;
   top: 120px;
-}
-
-
-/* Button Style */
-
-
-a {
-  color:black;
-  text-decoration: none;
-  font-family: 'Sans';
-}
-
-
-/* About Us */
-
-#backHome {
-  margin-left: 260px;
-  margin-right: 255px;
-}
-
-#aboutUs{
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* Team positioning */
-#team {
-  position: relative;
-  height: 500px;
-  width: 485px;
-  margin: auto;
-}
-
-.name {
-  margin: 0;
-  padding: 0px;
-}
-#col1 {
-  display: inline-block;
-  padding-bottom: 0px;
-}
-
-#nameSarah {
-}
-
-#imgSarah {
-  margin-bottom:130px;
-}
-
-#col2 {
-  display: inline-block;
-}
-
-#nameMatt {
-}
-
-#imgMatt {
-}
-
-#nameCollin {
-  margin-top: 50px;
-}
-
-#imgCollin {
-}
-
-#col3 {
-  display: inline-block;
-  margin-right: 10px;
-  float: right;
-}
-
-#nameJames {
-  margin-top: 120px;
-}
-
-#imgJames {
-}
-
-.current {
-  font-weight: bold;
 }
