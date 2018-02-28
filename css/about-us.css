@@ -19,12 +19,18 @@ h2 {
   color: white;
   font-size: 30px;
 }
+
+.notransform {
+  transform: none !important;
+}
+
 .focusR {
   transform: translate(100px, 0px);
 }
 .focusL {
   transform: translate(-100px, 0px);
 }
+
 #info {
   width: 335px;
 
