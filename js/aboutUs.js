@@ -23,7 +23,6 @@ window.addEventListener('keydown', function (event) {
   event.preventDefault();
 }, true);
 
-
 document.getElementById('info').hidden = true;
 var sarahImg = document.getElementById('imgSarah');
 var collinImg = document.getElementById('imgCollin');
