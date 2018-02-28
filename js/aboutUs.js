@@ -38,7 +38,7 @@ function clear(ghostPic, className) {
     }
   }
   if(!ghostPic.classList.contains(className)) {
-    teamImg.src = '';
+    teamImg.src = 'images/Spooky-Small.png';
     document.getElementById('info').innerHTML = 'Press the arrow keys to find out more about the developers of Spooky Says!';
     document.getElementById('info').style.borderColor = '#fff';
   }
@@ -71,11 +71,6 @@ function makeJames(){
   var jamesInfo = 'When James isn\'t breaking code, he nerds out on bicycles, camping, and incomplete lists.';
   document.getElementById('info').innerHTML = jamesInfo;
   document.getElementById('info').style.borderColor = '#00ff00';
-<<<<<<< HEAD
-  jamesImg.classList.toggle('focusR');
-  clear(jamesImg, 'focusR');
-}
-
   ghostJames.classList.toggle('focusR');
   teamImg.src = 'images/Ghost-R.png';
   clear(ghostJames, 'focusR');
