@@ -1,0 +1,62 @@
+body {
+  width: 100%;
+  margin: auto;
+  font-family: 'VT323', monospace;
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Swanky and Moo Moo', cursive;
+}
+
+header {
+  height: 150px;
+}
+
+button {
+  height: 60px;
+  width: 200px;
+  margin: 10px auto;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: #fff000;
+  border: 8px solid rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'VT323', monospace;
+}
+
+#hi-scores, message, h2{
+  text-align: center;
+  margin: 0px auto;
+}
+
+#message, h2 {
+  font-size: 30px;
+}
+
+#ghost {
+  text-align: center;
+}
+
+#buttons {
+  text-align: center;
+}
+
+#about-us {
+  background-color: #00ff00;
+}
+
+table {
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+footer {
+  height: 50px;
+}
+
