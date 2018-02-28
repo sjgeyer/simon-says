@@ -19,6 +19,19 @@ h2 {
   font-size: 30px;
 }
 
+#info {
+  height: 100px;
+  width: 335px;
+  overflow: none;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: orange;
+  border-width: 5px;
+  color: yellow;
+  font-size: 18pt;
+  text-align: center;
+}
 
 /* Button Style */
 
