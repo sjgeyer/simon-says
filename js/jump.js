@@ -112,7 +112,6 @@ function computerTurn () {
   nextButton.style.display = 'none';
   correct.style.display = 'none';
   wrong.style.display = 'none';
-  console.log(randoms);
   iterate = setInterval(iterateArray, baseTime);
   userTurnTimeout = setTimeout(userTurn, (randoms.length*baseTime)+baseTime);
 }
@@ -127,28 +126,24 @@ function keyDown(event) {
     var newArrow = document.createElement('img');
     newArrow.src = 'images/Arrow-D.png';
     arrowImages.appendChild(newArrow);
-    console.log(keyPresses);
     break;
   case 'ArrowUp':
     keyPresses.push(2);
     newArrow = document.createElement('img');
     newArrow.src = 'images/Arrow-U.png';
     arrowImages.appendChild(newArrow);
-    console.log(keyPresses);
     break;
   case 'ArrowLeft':
     keyPresses.push(1);
     newArrow = document.createElement('img');
     newArrow.src = 'images/Arrow-L.png';
     arrowImages.appendChild(newArrow);
-    console.log(keyPresses);
     break;
   case 'ArrowRight':
     keyPresses.push(3);
     newArrow = document.createElement('img');
     newArrow.src = 'images/Arrow-R.png';
     arrowImages.appendChild(newArrow);
-    console.log(keyPresses);
     break;
   case 'Backspace':
     keyPresses.pop();
@@ -203,7 +198,6 @@ function checkLogic(){
       livesLeft--;
       round--;
       repeat = true;
-      console.log(repeat);
       window.addEventListener('keydown', computerTurn, true);
       submitButton.style.display = 'none';
       nextButton.style.display = 'block';
