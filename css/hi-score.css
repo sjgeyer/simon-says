@@ -31,6 +31,8 @@ button {
 
 a {
   font-family: 'VT323', monospace;
+  text-decoration: none;
+  color: black;
 }
 
 #hi-scores, message, h2{
@@ -64,3 +66,6 @@ footer {
   height: 50px;
 }
 
+.current {
+  color: #fff000;
+}
