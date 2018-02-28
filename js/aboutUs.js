@@ -72,6 +72,6 @@ function makeJames(){
   document.getElementById('info').innerHTML = jamesInfo;
   document.getElementById('info').style.borderColor = '#00ff00';
   ghostJames.classList.toggle('focusR');
-  teamImg.src = 'images/Ghost-R.png';
+  teamImg.src = 'images/james.jpg';
   clear(ghostJames, 'focusR');
 }
