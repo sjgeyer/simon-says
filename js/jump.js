@@ -26,8 +26,8 @@ var repeat = false;
 
 document.getElementById('headMessage').innerHTML = 'Hi ' + userName + ', can you follow my moves?';
 
-var gameOver = document.createElement('img');
-gameOver.src = 'images/Game-Over.png';
+var gameOvers = document.getElementById('gameOvers');
+var gameOverGhost = document.getElementById('gameOverGhost');
 var scoresButton = document.getElementById('scoresButton');
 
 var addJump;
@@ -68,10 +68,16 @@ function iterateArray() {
 }
 
 function computerTurn () {
-  document.getElementById('instructions').hidden = true;
-  if (round === 1){
+  if (round === 1 && repeat === false){
     addRandom();
   }
+  if (repeat === false){
+    addRandom();
+  }
+  if (repeat === true){
+    repeat = false;
+  }
+  document.getElementById('instructions').hidden = true;
   if (round === 4){
     baseTime = 600;
     jumpClass = 'jump2x';
@@ -103,12 +109,6 @@ function computerTurn () {
   nextButton.style.display = 'none';
   correct.style.display = 'none';
   wrong.style.display = 'none';
-  if (repeat !== true){
-    addRandom();
-  }
-  else if (repeat === true){
-    repeat = false;
-  }
   console.log(randoms);
   iterate = setInterval(iterateArray, baseTime);
   userTurnTimeout = setTimeout(userTurn, (randoms.length*baseTime)+baseTime);
@@ -181,7 +181,10 @@ function checkLogic(){
   for(var i = 0; i < randoms.length; i++) {
     if(livesLeft === 1 && randoms[i] !== keyPresses[i] || livesLeft === 1 && randoms.length !== keyPresses.length) {
       gameElements.textContent = '';
-      gameElements.appendChild(gameOver);
+
+      gameOvers.style.display = 'block';
+      gameOverGhost.src='images/Ghost-D.png';
+
       scoresButton.style.display = 'block';
       localStorage.setItem('roundNumber', JSON.stringify(round));
       if (localStorage.allUsers) {
@@ -196,6 +199,7 @@ function checkLogic(){
       livesLeft--;
       round--;
       repeat = true;
+      console.log(repeat);
       window.addEventListener('keydown', computerTurn, true);
       submitButton.style.display = 'none';
       nextButton.style.display = 'block';
