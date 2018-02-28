@@ -23,15 +23,23 @@ h2 {
   font-size: 30px;
 }
 
-.notransform {
-  transform: none !important;
+@keyframes floatSmall {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
 .focusR {
-  transform: translate(100px, 0px);
+  animation: floatSmall 1s ease-in-out infinite;
 }
 .focusL {
-  transform: translate(-100px, 0px);
+  animation: floatSmall 1s ease-in-out infinite;
 }
 
 #info {
@@ -82,38 +90,75 @@ a {
 /* Team positioning */
 #team {
   position: relative;
-  height: 500px;
-  width: 485px;
-  margin: auto;
+  height: 420px;
+  width: 500px;
+  float: left;
 }
 
 .name {
-  margin: 0;
-  padding: 0px;
-}
-#col1 {
-  display: inline-block;
-  padding-bottom: 0px;
+  position: absolute;
 }
 
-#imgSarah {
-  margin-bottom:130px;
+.sarah {
+  position: absolute;
+  top: 140px;
 }
 
-#col2 {
-  display: inline-block;
-  margin-left: 10px;
+#nameSarah {
+  position: absolute;
+  top: 110px;
+  left: 40px;
+}
+
+.matt {
+  position: absolute;
+  top: 30px;
+  left: 170px;
+}
+
+#nameMatt {
+  position: absolute;
+  left: 215px;
+}
+
+.collin {
+  position: absolute;
+  bottom: 0px;
+  left: 170px;
 }
 
 #nameCollin {
-  margin-top: 50px;
+  position: absolute;
+  bottom: 150px;
+  left: 205px;
 }
 
-#col3 {
-  margin-right: 10px;
-  float: right;
+.james {
+  position: absolute;
+  right: 0px;
+  top: 140px;
 }
 
 #nameJames {
-  margin-top: 120px;
+  position: absolute;
+  right: 50px;
+  top: 110px;
+}
+
+#info {
+  float: left;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#teamImg {
+  margin-left: 150px;
+  margin-top: 30px;
+  height: 150px;
+  width: 150px;
+}
+
+div {
+  width: 1000px;
+  margin-top: 30px;
 }
