@@ -85,3 +85,11 @@ body {
   right: 0px;
   top: 120px;
 }
+
+#gameOvers {
+  text-align: center;
+}
+
+#gameOverMsg {
+  font-size: 50px;
+}
