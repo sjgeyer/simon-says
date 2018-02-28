@@ -14,11 +14,14 @@ var yourTurn = document.getElementById('yourTurn');
 var arrowImages = document.getElementById('arrowImages');
 var roundCounter = document.getElementById('roundCounter');
 var correct = document.getElementById('correct');
+var wrong = document.getElementById('wrong');
 var dynamicTag = document.getElementById('dynamicTag');
 var round = 1;
 var userName = JSON.parse(localStorage.getItem('userName'));
 var baseTime = 1000;
 var jumpClass = 'jump';
+var livesLeft = 4;
+var healthBar = document.getElementById('lives');
 
 document.getElementById('headMessage').innerHTML = 'Hi ' + userName + ', can you follow my moves?';
 
@@ -64,6 +67,7 @@ function iterateArray() {
 }
 
 function computerTurn () {
+  document.getElementById('instructions').hidden = true;
   if (round === 1){
     addRandom();
     addRandom();
@@ -84,6 +88,7 @@ function computerTurn () {
   submitButton.style.display = 'none';
   nextButton.style.display = 'none';
   correct.style.display = 'none';
+  wrong.style.display = 'none';
   addRandom();
   console.log(randoms);
   iterate = setInterval(iterateArray, baseTime);
@@ -155,7 +160,7 @@ function User(name, score){
 function checkLogic(){
   window.removeEventListener('keydown', keyDown, true);
   for(var i = 0; i < randoms.length; i++) {
-    if(randoms[i] !== keyPresses[i] || randoms.length !== keyPresses.length) {
+    if(livesLeft === 1 && randoms[i] !== keyPresses[i] || livesLeft === 0 && randoms.length !== keyPresses.length) {
       gameElements.textContent = '';
       gameElements.appendChild(gameOver);
       scoresButton.style.display = 'block';
@@ -168,14 +173,23 @@ function checkLogic(){
       }
       localStorage.setItem('allUsers', JSON.stringify(User.allUsers));
       break;
+    } else if (randoms[i] !== keyPresses[i] || randoms.length !== keyPresses.length) {
+      livesLeft--;
+      window.addEventListener('keydown', computerTurn, true);
+      submitButton.style.display = 'none';
+      nextButton.style.display = 'block';
+      wrong.style.display = 'block';
+      correct.style.display = 'none';
+      healthBar.removeChild(healthBar.lastElementChild);
+      break;
     } else {
       submitButton.style.display = 'none';
       nextButton.style.display = 'block';
       correct.style.display = 'block';
+      wrong.style.display = 'none';
       window.addEventListener('keydown', computerTurn, true);
     }
   }
-  console.log(round);
   round++;
 }
 
