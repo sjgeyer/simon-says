@@ -25,6 +25,19 @@ body {
   animation-iteration-count: 1;
 }
 
+@keyframes flip {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flip {
+  animation-name: flip;
+  animation-duration: .25s;
+  animation-iteration-count:1;
+}
+
+
 #roundCounter {
   float: right;
 }

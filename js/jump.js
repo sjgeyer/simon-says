@@ -73,6 +73,10 @@ function computerTurn () {
     jumpClass = 'jump2x';
     dynamicTag.textContent = 'SPEED UP!';
   }
+  if (round === 7){
+    jumpClass = 'flip';
+    dynamicTag.textContent = "SPEED UP! FLIP!";
+  }
   submitButton.removeEventListener('click', checkLogic);
   window.removeEventListener('keydown', computerTurn, true);
   roundCounter.textContent = 'Round ' + round;
