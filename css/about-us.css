@@ -5,14 +5,17 @@ body {
   background-color: black;
 }
 
-p {
-   color: white;
-}
-
 h1 {
   color: white;
-  font-size: 65px;
+  font-size: 80px;
   font-family: 'Creepster', cursive;
+}
+
+p {
+   color: white;
+   font-size: 30px;
+   text-align: center;
+   margin: 20px;
 }
 
 h2 {
@@ -33,7 +36,6 @@ h2 {
 
 #info {
   width: 335px;
-
   overflow: none;
   margin-left: auto;
   margin-right: auto;
