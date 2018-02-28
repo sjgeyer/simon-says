@@ -2,10 +2,11 @@
 
 var userForm = document.getElementById('userForm');
 
-userForm.addEventListener('submit', function(event) {
-  event.preventDefault();
+userForm.addEventListener('submit', handleSubmit);
 
+function handleSubmit(){
   if(event.target.input.value === 'Enter Name' || event.target.input.value === ''){
+    event.preventDefault();
     alert('Enter Your Name');
   }
   else{
@@ -14,7 +15,6 @@ userForm.addEventListener('submit', function(event) {
     window.location.assign('game.html');
   }
 }
-
 
 
 //   if(event.target.input.value.length < 2 ){
@@ -35,5 +35,3 @@ userForm.addEventListener('submit', function(event) {
 //     localStorage.setItem('userName',JSON.stringify(userName));
 //     window.location.assign('game.html');
 // }
-
-// });
