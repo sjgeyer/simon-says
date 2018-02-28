@@ -23,19 +23,29 @@ window.addEventListener('keydown', function (event) {
   event.preventDefault();
 }, true);
 
+document.getElementById('info').hidden = true;
+
 function makeCollin(){
-  var collinInfo = 'This is where Colin\'s info will go';
-  document.getElementById("info").innerHTML = collinInfo;
+  var collinInfo = 'This is where Collin\'s info will go';
+  document.getElementById('info').innerHTML = collinInfo;
+  document.getElementById('info').hidden = false;
+  document.getElementById('info').style.borderColor = '#0000ff';
 }
 function makeSarah(){
-  var sarahInfo = 'This is where Sarah\'s info will go';
-  document.getElementById("info").innerHTML = sarahInfo;
+  var sarahInfo = 'Sarah is an environmental activist	turned coding enthusiast. She enjoys eating burritos, watching true crime documentaries, and falling asleep on other people\'s couches.';
+  document.getElementById('info').innerHTML = sarahInfo;
+  document.getElementById('info').hidden = false;
+  document.getElementById('info').style.borderColor = '#ff0000';
 }
 function makeMatt(){
   var mattInfo = 'This is where Matt\'s info will go';
-  document.getElementById("info").innerHTML = mattInfo;
+  document.getElementById('info').innerHTML = mattInfo;
+  document.getElementById('info').hidden = false;
+  document.getElementById('info').style.borderColor = '#fff000';
 }
 function makeJames(){
   var jamesInfo = 'When James isn\'t breaking code, he nerds out on bicycles, camping, and incomplete lists.';
-  document.getElementById("info").innerHTML = jamesInfo;
+  document.getElementById('info').innerHTML = jamesInfo;
+  document.getElementById('info').hidden = false;
+  document.getElementById('info').style.borderColor = '#00ff00';
 }
