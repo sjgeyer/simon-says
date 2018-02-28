@@ -179,7 +179,7 @@ function User(name, score){
 function checkLogic(){
   window.removeEventListener('keydown', keyDown, true);
   for(var i = 0; i < randoms.length; i++) {
-    if(livesLeft === 1 && randoms[i] !== keyPresses[i] || livesLeft === 0 && randoms.length !== keyPresses.length) {
+    if(livesLeft === 1 && randoms[i] !== keyPresses[i] || livesLeft === 1 && randoms.length !== keyPresses.length) {
       gameElements.textContent = '';
       gameElements.appendChild(gameOver);
       scoresButton.style.display = 'block';
