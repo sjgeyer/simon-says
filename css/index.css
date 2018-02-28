@@ -1,5 +1,5 @@
 body {
-  width: 100%;
+  width: 1000px;
   margin: auto;
   font-family: 'VT323', monospace;
   background-color: #000;
@@ -85,7 +85,7 @@ footer {
 
 #spooky{
   float: left;
-  margin-left: 15%;
+  margin-left: 50px;
   animation: floatBig 4s ease-in-out infinite;
 }
 
