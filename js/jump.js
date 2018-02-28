@@ -22,6 +22,7 @@ var baseTime = 1000;
 var jumpClass = 'jump';
 var livesLeft = 4;
 var healthBar = document.getElementById('lives');
+var repeat = false;
 
 document.getElementById('headMessage').innerHTML = 'Hi ' + userName + ', can you follow my moves?';
 
@@ -70,16 +71,25 @@ function computerTurn () {
   document.getElementById('instructions').hidden = true;
   if (round === 1){
     addRandom();
-    addRandom();
   }
   if (round === 4){
-    baseTime = (baseTime * .5);
+    baseTime = 600;
     jumpClass = 'jump2x';
     dynamicTag.textContent = 'SPEED UP!';
   }
-  if (round === 7){
+  if (round === 8){
     jumpClass = 'flip';
+    baseTime = 400;
     dynamicTag.textContent = 'SPEED UP! FLIP!';
+  }
+  if (round === 11){
+    jumpClass = 'flipFast';
+    baseTime = 300;
+    red.src = 'images/Spooky-Small.png';
+    yellow.src = 'images/Spooky-Small.png';
+    green.src = 'images/Spooky-Small.png';
+    blue.src = 'images/Spooky-Small.png';
+    dynamicTag.textContent = 'SPEED UP! FLIP! SPOOKY CHALLENGE!';
   }
   submitButton.removeEventListener('click', checkLogic);
   window.removeEventListener('keydown', computerTurn, true);
@@ -93,7 +103,12 @@ function computerTurn () {
   nextButton.style.display = 'none';
   correct.style.display = 'none';
   wrong.style.display = 'none';
-  addRandom();
+  if (repeat !== true){
+    addRandom();
+  }
+  else if (repeat === true){
+    repeat = false;
+  }
   console.log(randoms);
   iterate = setInterval(iterateArray, baseTime);
   userTurnTimeout = setTimeout(userTurn, (randoms.length*baseTime)+baseTime);
@@ -180,9 +195,7 @@ function checkLogic(){
     } else if (randoms[i] !== keyPresses[i] || randoms.length !== keyPresses.length) {
       livesLeft--;
       round--;
-      console.log(randoms);
-      randoms.pop();
-      console.log(randoms);
+      repeat = true;
       window.addEventListener('keydown', computerTurn, true);
       submitButton.style.display = 'none';
       nextButton.style.display = 'block';

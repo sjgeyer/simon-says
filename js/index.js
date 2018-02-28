@@ -10,6 +10,7 @@ function handleSubmit(){
     alert('Enter Your Name');
   }
   else{
+    event.preventDefault();
     var userName = event.target.input.value;
     localStorage.setItem('userName',JSON.stringify(userName));
     window.location.assign('game.html');
