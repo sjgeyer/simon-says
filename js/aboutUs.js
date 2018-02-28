@@ -60,17 +60,22 @@ function makeSarah(){
   clear(ghostSarah, 'focusL');
 }
 function makeMatt(){
-  var mattInfo = 'This is where Matt\'s info will go';
+  var mattInfo = 'Matt is an aspiring web developer who enjoys helping people figure out what they want and then helping them get it.';
   document.getElementById('info').innerHTML = mattInfo;
   document.getElementById('info').style.borderColor = '#fff000';
   ghostMatt.classList.toggle('focusL');
-  teamImg.src = 'images/Ghost-D.png';
+  teamImg.src = 'images/matt.jpg';
   clear(ghostMatt, 'focusL');
 }
 function makeJames(){
   var jamesInfo = 'When James isn\'t breaking code, he nerds out on bicycles, camping, and incomplete lists.';
   document.getElementById('info').innerHTML = jamesInfo;
   document.getElementById('info').style.borderColor = '#00ff00';
+<<<<<<< HEAD
+  jamesImg.classList.toggle('focusR');
+  clear(jamesImg, 'focusR');
+}
+
   ghostJames.classList.toggle('focusR');
   teamImg.src = 'images/Ghost-R.png';
   clear(ghostJames, 'focusR');
