@@ -1,6 +1,6 @@
 'use-strict';
 
-var score = JSON.parse(localStorage.getItem('roundNumber'))-1;
+var score = JSON.parse(localStorage.getItem('roundNumber'));
 
 if (localStorage.allUsers){
   var allUsers = JSON.parse(localStorage.getItem('allUsers'));
