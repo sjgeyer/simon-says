@@ -6,6 +6,7 @@ var blue = document.getElementById('blue');
 var green = document.getElementById('green');
 var startButton = document.getElementById('start');
 var instructions = document.getElementById('instructions');
+var title = document.getElementById('title');
 var nextButton = document.getElementById('next');
 var submitButton = document.getElementById('submit');
 var exitButton = document.getElementById('exitButton');
@@ -78,7 +79,6 @@ function computerTurn () {
   if (repeat === true){
     repeat = false;
   }
-  document.getElementById('instructions').hidden = true;
   if (round === 4){
     baseTime = 600;
     jumpClass = 'jump2x';
@@ -106,6 +106,7 @@ function computerTurn () {
   myTurn.style.display = 'block';
   startButton.style.display = 'none';
   instructions.style.display = 'none';
+  title.style.display = 'none';
   submitButton.style.display = 'none';
   exitButton.style.display = 'block';
   nextButton.style.display = 'none';
@@ -184,6 +185,7 @@ function checkLogic(){
     if(livesLeft === 1 && randoms[i] !== keyPresses[i] || livesLeft === 1 && randoms.length !== keyPresses.length) {
       gameElements.textContent = '';
 
+      title.style.display = 'block';
       gameOvers.style.display = 'block';
       gameOverGhost.src='images/Ghost-D.png';
 
