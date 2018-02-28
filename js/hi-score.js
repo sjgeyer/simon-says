@@ -2,6 +2,10 @@
 
 var score = JSON.parse(localStorage.getItem('roundNumber'));
 
+// generate the title message
+var messageContent = document.getElementById('message');
+messageContent.textContent = 'You made it to round ' + score + '!';
+
 if (localStorage.allUsers){
   var allUsers = JSON.parse(localStorage.getItem('allUsers'));
 }
@@ -35,7 +39,3 @@ for (var j = 0; j < 10; j++){
     trEl.classList.add('current');
   }
 }
-
-// generate the title message
-var messageContent = document.getElementById('message');
-messageContent.textContent = 'You made it to round ' + score + '!';
