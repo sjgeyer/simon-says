@@ -185,6 +185,7 @@ function checkLogic(){
     if(livesLeft === 1 && randoms[i] !== keyPresses[i] || livesLeft === 1 && randoms.length !== keyPresses.length) {
       gameElements.textContent = '';
 
+      title.style.display = 'block';
       gameOvers.style.display = 'block';
       gameOverGhost.src='images/Ghost-D.png';
 
