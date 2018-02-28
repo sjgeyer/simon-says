@@ -5,22 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Spooky Says - Hi Score</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/hi-score.css" />
+  <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|VT323" rel="stylesheet">
 </head>
 
 <body>
   <header>
       <h1>Spooky Says</h1>
   </header>
+
   <h2 id="message"></h2>
-  <img src="http://via.placeholder.com/200x200">
+
+  <div id="ghost">
+  <img src="images/Ghost-L.png" />
+  </div>
+
   <h2>Hi-Scores!!!</h2>
   <table id="hi-scores">
   </table>
   
-  <button><a href="game.html">Try Again</a></button>
-  <button><a href="about-us.html">About Us</a></button>
+  <div id="buttons">
+    <button id="try-again"><a href="game.html">Try Again</a></button>
+    <button id="about-us"><a href="about-us.html">About Us</a></button>
+  </div>
   <script src="js/hi-score.js"></script>
+  
 </body>
 </html>

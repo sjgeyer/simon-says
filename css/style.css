@@ -20,15 +20,25 @@ body {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
-<<<<<<< HEAD
-/*Ghost positioning*/
-=======
 
 .jump2x {
   animation-name: jump;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
 }
+
+@keyframes flip {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flip {
+  animation-name: flip;
+  animation-duration: .25s;
+  animation-iteration-count:1;
+}
+
 
 #roundCounter {
   float: right;
