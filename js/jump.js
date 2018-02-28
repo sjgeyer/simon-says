@@ -79,7 +79,7 @@ function computerTurn () {
   }
   if (round === 7){
     jumpClass = 'flip';
-    dynamicTag.textContent = "SPEED UP! FLIP!";
+    dynamicTag.textContent = 'SPEED UP! FLIP!';
   }
   submitButton.removeEventListener('click', checkLogic);
   window.removeEventListener('keydown', computerTurn, true);
@@ -179,6 +179,10 @@ function checkLogic(){
       break;
     } else if (randoms[i] !== keyPresses[i] || randoms.length !== keyPresses.length) {
       livesLeft--;
+      round--;
+      console.log(randoms);
+      randoms.pop();
+      console.log(randoms);
       window.addEventListener('keydown', computerTurn, true);
       submitButton.style.display = 'none';
       nextButton.style.display = 'block';
