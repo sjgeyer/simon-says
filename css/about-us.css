@@ -1,43 +1,51 @@
 body {
   width: 1000px;
   margin: auto;
-  font-family: 'Swanky and Moo Moo', cursive;
+  font-family: 'VT323', monospace;
   background-color: black;
-}
-
-p {
-   color: white;
 }
 
 h1 {
   color: white;
-  font-size: 65px;
+  font-size: 80px;
+  font-family: 'Creepster', cursive;
+}
+
+p {
+   color: white;
+   font-size: 30px;
+   text-align: center;
+   margin: 20px;
 }
 
 h2 {
   color: white;
   font-size: 30px;
 }
+
+.notransform {
+  transform: none !important;
+}
+
 .focusR {
   transform: translate(100px, 0px);
 }
 .focusL {
   transform: translate(-100px, 0px);
 }
-#info {
-  height: 100px;
-  width: 335px;
 
+#info {
+  width: 335px;
   overflow: none;
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
   border-radius: 22px;
-  border-color: orange;
   border-width: 5px;
-  color: yellow;
+  color: #ffffff;
   font-size: 18pt;
   text-align: center;
+  padding: 10px;
 }
 
 /* Button Style */
@@ -47,7 +55,7 @@ button {
   width: 200px;
   margin: 10px auto;
   text-align: center;
-  color: white;
+  color: #000;
   background-color: #00ff00;
   border: 8px solid white;
   font-size: 20px;
@@ -88,9 +96,6 @@ a {
   padding-bottom: 0px;
 }
 
-#nameSarah {
-}
-
 #imgSarah {
   margin-bottom:130px;
 }
@@ -100,28 +105,15 @@ a {
   margin-left: 10px;
 }
 
-#nameMatt {
-}
-
-#imgMatt {
-}
-
 #nameCollin {
   margin-top: 50px;
 }
 
-#imgCollin {
-}
-
 #col3 {
-  display: inline-block;
   margin-right: 10px;
   float: right;
 }
 
 #nameJames {
   margin-top: 120px;
-}
-
-#imgJames {
 }
