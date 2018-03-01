@@ -21,6 +21,10 @@
     <p id="dynamicTag"></p>
     <button id="start">Start</button>
     <h3 id="roundCounter"></h3>
+    <div id= "volElements" style="display:none">
+        <h3>Volume:</h3>
+        <input id="volSlider" type="range" min="0" max="10" step="1" oninput="setVolume(this.value)" onchange="setVolume(this.value)"></input>
+      </div>
     <ul id="lives">Lives left:
       <li><img src="images/heart.png" alt="health" title="health"></li>
       <li><img src="images/heart.png" alt="health" title="health"></li>
@@ -44,6 +48,8 @@
     </div>
     <a href="index.html"><button id="exitButton" style="display:none">Exit Game</button></a>
   </div>
+  
+
   <div id= "gameOvers" style="display:none">
     <img id="gameOverGhost" src="" />
     <h2 id="gameOverMsg">Game Over!</h2>

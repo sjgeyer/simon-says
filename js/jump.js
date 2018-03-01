@@ -10,6 +10,7 @@ var title = document.getElementById('title');
 var nextButton = document.getElementById('next');
 var submitButton = document.getElementById('submit');
 var exitButton = document.getElementById('exitButton');
+var volElements = document.getElementById('volElements');
 var gameElements = document.getElementById('gameElements');
 var myTurn = document.getElementById('myTurn');
 var yourTurn = document.getElementById('yourTurn');
@@ -25,6 +26,20 @@ var jumpClass = 'jump';
 var livesLeft = 4;
 var healthBar = document.getElementById('lives');
 var repeat = false;
+
+var soundL = new Audio('sounds/sound-L.mp3');
+var soundU = new Audio('sounds/sound-U.mp3');
+var soundR = new Audio('sounds/sound-R.mp3');
+var soundD = new Audio('sounds/sound-D.mp3');
+
+var addSound;
+
+function setVolume(num){
+  soundL.volume = num/10;
+  soundU.volume = num/10;
+  soundR.volume = num/10;
+  soundD.volume = num/10;
+}
 
 document.getElementById('headMessage').innerHTML = 'Hi ' + userName + ', can you follow my moves?';
 
@@ -50,18 +65,22 @@ function iterateArray() {
     if (randoms[i] === 1) {
       addJump = setTimeout(function() {red.classList.add(jumpClass);}, baseTime*i);
       removeJump = setTimeout(function() {red.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
+      addSound = setTimeout(function() {soundL.play();}, baseTime*i);
     }
     if (randoms[i] === 2) {
       addJump = setTimeout(function() {yellow.classList.add(jumpClass);}, baseTime*i);
       removeJump = setTimeout(function() {yellow.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
+      addSound = setTimeout(function() {soundU.play();}, baseTime*i);
     }
     if (randoms[i] === 3) {
       addJump = setTimeout(function() {green.classList.add(jumpClass);}, baseTime*i);
       removeJump = setTimeout(function() {green.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
+      addSound = setTimeout(function() {soundR.play();}, baseTime*i);
     }
     if (randoms[i] === 4) {
       addJump = setTimeout(function() {blue.classList.add(jumpClass);}, baseTime*i);
       removeJump = setTimeout(function() {blue.classList.remove(jumpClass);}, (baseTime*i)+baseTime/2);
+      addSound = setTimeout(function() {soundD.play();}, baseTime*i);
     }
     if (i === randoms.length){
       clearInterval(iterate);
@@ -96,6 +115,11 @@ function computerTurn () {
     yellow.src = 'images/Spooky-Small.png';
     green.src = 'images/Spooky-Small.png';
     blue.src = 'images/Spooky-Small.png';
+    soundL.src = 'sounds/Sound-S.mp3';
+    soundU.src = 'sounds/Sound-S.mp3';
+    soundR.src = 'sounds/Sound-S.mp3';
+    soundD.src = 'sounds/Sound-S.mp3';
+    
     dynamicTag.textContent = 'SPEED UP! FLIP! SPOOKY CHALLENGE!';
   }
   submitButton.removeEventListener('click', checkLogic);
@@ -109,6 +133,7 @@ function computerTurn () {
   title.style.display = 'none';
   submitButton.style.display = 'none';
   exitButton.style.display = 'block';
+  volElements.style.display = 'block';
   nextButton.style.display = 'none';
   correct.style.display = 'none';
   wrong.style.display = 'none';
@@ -184,6 +209,7 @@ function checkLogic(){
       title.style.display = 'block';
       gameOvers.style.display = 'block';
       gameOverGhost.src='images/Ghost-D.png';
+      window.removeEventListener('keydown', computerTurn, true);
 
       scoresButton.style.display = 'block';
       localStorage.setItem('roundNumber', JSON.stringify(round));
