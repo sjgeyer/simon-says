@@ -168,9 +168,10 @@ function userTurn () {
   submitButton.addEventListener('click', checkLogic);
 }
 
-function User(name, score){
+function User(name, score, current){
   this.name = name;
   this.score = score;
+  this.current = current;
   User.allUsers.push(this);
 }
 
@@ -189,8 +190,11 @@ function checkLogic(){
       if (localStorage.allUsers) {
         User.allUsers = JSON.parse(localStorage.getItem('allUsers'));
       }
+      for ( var j = 0; j < User.allUsers.length; j++) {
+        User.allUsers[j].current = false;
+      }
       if(round > 1) {
-        new User(userName, round-1);
+        new User(userName, round-1, true);
       }
       localStorage.setItem('allUsers', JSON.stringify(User.allUsers));
       break;
