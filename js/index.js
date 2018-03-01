@@ -3,6 +3,7 @@
 var userForm = document.getElementById('userForm');
 var matt = document.getElementById('matt');
 var james = document.getElementById('james');
+var spooky = document.getElementById('spooky');
 
 userForm.addEventListener('submit', handleSubmit);
 
@@ -25,4 +26,8 @@ matt.addEventListener('dblclick', function(){
 
 james.addEventListener('dblclick', function(){
   window.location.assign('yellowgreen.html');
+});
+
+spooky.addEventListener('dblclick', function(){
+  window.location.assign('spooky.html');
 });
