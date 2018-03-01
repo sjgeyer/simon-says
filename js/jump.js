@@ -115,10 +115,10 @@ function computerTurn () {
     yellow.src = 'images/Spooky-Small.png';
     green.src = 'images/Spooky-Small.png';
     blue.src = 'images/Spooky-Small.png';
-    soundL.src = 'sounds/Sound-S.mp3';
-    soundU.src = 'sounds/Sound-S.mp3';
-    soundR.src = 'sounds/Sound-S.mp3';
-    soundD.src = 'sounds/Sound-S.mp3';
+    soundL.src = 'sounds/sound-S.mp3';
+    soundU.src = 'sounds/sound-S.mp3';
+    soundR.src = 'sounds/sound-S.mp3';
+    soundD.src = 'sounds/sound-S.mp3';
     
     dynamicTag.textContent = 'SPEED UP! FLIP! SPOOKY CHALLENGE!';
   }
