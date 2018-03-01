@@ -6,23 +6,25 @@ var div = document.getElementById('div');
 var catchText = document.getElementById('catch');
 var caughtText = document.getElementById('caught');
 var button = document.getElementById('backHome');
+var go = document.getElementById('go');
 
-spookyImg.addEventListener('click', clickSpooky);
-
-var hide = setTimeout(hideText, 750);
+go.addEventListener('click', hideText);
 
 function hideText () {
   catchText.hidden = true;
+  go.hidden = true;
   h1.classList.add('hidden');
+  spookyImg.classList.add('spookyMove');
+  div.classList.add('divMove');
+  spookyImg.addEventListener('click', clickSpooky);
 }
 
 function clickSpooky() {
-  catchText.classList.toggle('hidden');
-  caughtText.classList.toggle('hidden');
-  button.classList.toggle('hidden');
-  spookyImg.classList.toggle('spookyMove');
-  div.classList.toggle('divMove');
-  h1.classList.toggle('hidden');
+  caughtText.classList.remove('hidden');
+  button.classList.remove('hidden');
+  spookyImg.classList.remove('spookyMove');
+  div.classList.remove('divMove');
+  h1.classList.remove('hidden');
   console.log('clicked');
   spookyImg.removeEventListener('click', clickSpooky);
 }

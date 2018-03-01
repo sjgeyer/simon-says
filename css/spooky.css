@@ -23,7 +23,7 @@ button {
   margin: 50px auto;
   text-align: center;
   color: white;
-  background-color: #000000;
+  background-color: #ff0000;
   border: 8px solid rgb(255, 255, 255);
   font-size: 20px;
   font-weight: bold;
@@ -67,7 +67,7 @@ button {
 }
 
 div {
-  width: 300px;
+  width: 600px;
   margin: auto;
   text-align: center;
 }
@@ -109,17 +109,15 @@ div {
 }
 
 img {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .spookyMove {
   animation: swoopY 4s ease-in-out infinite alternate;
-  animation-delay: 0.75s;
 }
 
 .divMove {
   animation: swoopX 3s ease-in-out infinite alternate;
-  animation-delay: 0.75s;
 }
 
 p {
@@ -129,4 +127,9 @@ p {
 
 .hidden {
   display: none;
+}
+
+#go {
+  margin-bottom: 0px;
+  margin-top: 20px;
 }
