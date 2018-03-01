@@ -35,7 +35,7 @@ for (var j = 0; j < 10; j++){
   makeElement('td', allUsers[j].name, trEl);
   makeElement('td', allUsers[j].score*100, trEl);
   scoreTable.appendChild(trEl);
-  if (allUsers[j].name === JSON.parse(localStorage.getItem('userName')) && allUsers[j].score === JSON.parse(localStorage.getItem('roundNumber'))-1) {
+  if (allUsers[j].current) {
     trEl.classList.add('current');
   }
 }
